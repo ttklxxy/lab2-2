@@ -90,5 +90,17 @@ public class L2022211952_11_Test {
         List<List<Integer>> actual = threeSum(nums);  
         assertEquals(expected, actual);  
     }  
+    
+    // 测试目的：测试全负数数组，验证算法能否正确处理并返回空结果（因为不存在三数之和为零的组合） 
+    // 测试用例：{-1, -2, -3, -4, -5}
+    // by Fanbowen for PR
+    @Test
+    public void testThreeSumWithNegativeNumbers() {
+        Solution solution = new Solution();
+        int[] nums = {-1, -2, -3, -4, -5};
+        List<List<Integer>> expected = Arrays.asList();
+        List<List<Integer>> result = solution.threeSum(nums);
+        assertEquals(expected, result);
+    }
   
 }
